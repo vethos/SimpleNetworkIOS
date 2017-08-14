@@ -10,6 +10,13 @@
 		19B06AFF1F41935E003CB33D /* SimpleNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B06AF51F41935E003CB33D /* SimpleNetwork.framework */; };
 		19B06B041F41935E003CB33D /* SimpleNetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B06B031F41935E003CB33D /* SimpleNetworkTests.swift */; };
 		19B06B061F41935E003CB33D /* SimpleNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = 19B06AF81F41935E003CB33D /* SimpleNetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19B06B321F41973A003CB33D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B06B1B1F41968A003CB33D /* Alamofire.framework */; };
+		19B06B341F41974D003CB33D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B06B331F41974D003CB33D /* Router.swift */; };
+		19B06B391F4197A0003CB33D /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B06B381F4197A0003CB33D /* String+Utils.swift */; };
+		19B06B3B1F4197D4003CB33D /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B06B3A1F4197D4003CB33D /* NetworkResponse.swift */; };
+		19B06B3D1F419817003CB33D /* SimpleNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B06B3C1F419817003CB33D /* SimpleNetworkManager.swift */; };
+		19B06B3F1F419851003CB33D /* SimpleNetworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B06B3E1F419851003CB33D /* SimpleNetworkDelegate.swift */; };
+		19B06B411F41B921003CB33D /* TestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B06B401F41B921003CB33D /* TestRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,6 +27,55 @@
 			remoteGlobalIDString = 19B06AF41F41935E003CB33D;
 			remoteInfo = SimpleNetwork;
 		};
+		19B06B1A1F41968A003CB33D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19B06B0F1F419689003CB33D /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		19B06B1C1F41968A003CB33D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19B06B0F1F419689003CB33D /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		19B06B1E1F41968A003CB33D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19B06B0F1F419689003CB33D /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
+		19B06B201F41968A003CB33D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19B06B0F1F419689003CB33D /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire macOS Tests";
+		};
+		19B06B221F41968A003CB33D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19B06B0F1F419689003CB33D /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		19B06B241F41968A003CB33D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19B06B0F1F419689003CB33D /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		19B06B261F41968A003CB33D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19B06B0F1F419689003CB33D /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +85,13 @@
 		19B06AFE1F41935E003CB33D /* SimpleNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B06B031F41935E003CB33D /* SimpleNetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNetworkTests.swift; sourceTree = "<group>"; };
 		19B06B051F41935E003CB33D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19B06B0F1F419689003CB33D /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../frameworks/external/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		19B06B331F41974D003CB33D /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		19B06B381F4197A0003CB33D /* String+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
+		19B06B3A1F4197D4003CB33D /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		19B06B3C1F419817003CB33D /* SimpleNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetworkManager.swift; sourceTree = "<group>"; };
+		19B06B3E1F419851003CB33D /* SimpleNetworkDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetworkDelegate.swift; sourceTree = "<group>"; };
+		19B06B401F41B921003CB33D /* TestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B06B321F41973A003CB33D /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +117,7 @@
 		19B06AEB1F41935E003CB33D = {
 			isa = PBXGroup;
 			children = (
+				19B06B0F1F419689003CB33D /* Alamofire.xcodeproj */,
 				19B06AF71F41935E003CB33D /* SimpleNetwork */,
 				19B06B021F41935E003CB33D /* SimpleNetworkTests */,
 				19B06AF61F41935E003CB33D /* Products */,
@@ -73,6 +138,11 @@
 			children = (
 				19B06AF81F41935E003CB33D /* SimpleNetwork.h */,
 				19B06AF91F41935E003CB33D /* Info.plist */,
+				19B06B331F41974D003CB33D /* Router.swift */,
+				19B06B381F4197A0003CB33D /* String+Utils.swift */,
+				19B06B3A1F4197D4003CB33D /* NetworkResponse.swift */,
+				19B06B3C1F419817003CB33D /* SimpleNetworkManager.swift */,
+				19B06B3E1F419851003CB33D /* SimpleNetworkDelegate.swift */,
 			);
 			path = SimpleNetwork;
 			sourceTree = "<group>";
@@ -81,9 +151,24 @@
 			isa = PBXGroup;
 			children = (
 				19B06B031F41935E003CB33D /* SimpleNetworkTests.swift */,
+				19B06B401F41B921003CB33D /* TestRouter.swift */,
 				19B06B051F41935E003CB33D /* Info.plist */,
 			);
 			path = SimpleNetworkTests;
+			sourceTree = "<group>";
+		};
+		19B06B101F419689003CB33D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19B06B1B1F41968A003CB33D /* Alamofire.framework */,
+				19B06B1D1F41968A003CB33D /* Alamofire iOS Tests.xctest */,
+				19B06B1F1F41968A003CB33D /* Alamofire.framework */,
+				19B06B211F41968A003CB33D /* Alamofire macOS Tests.xctest */,
+				19B06B231F41968A003CB33D /* Alamofire.framework */,
+				19B06B251F41968A003CB33D /* Alamofire tvOS Tests.xctest */,
+				19B06B271F41968A003CB33D /* Alamofire.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +234,7 @@
 					19B06AF41F41935E003CB33D = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 4W7385FUX6;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					19B06AFD1F41935E003CB33D = {
@@ -168,6 +254,12 @@
 			mainGroup = 19B06AEB1F41935E003CB33D;
 			productRefGroup = 19B06AF61F41935E003CB33D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 19B06B101F419689003CB33D /* Products */;
+					ProjectRef = 19B06B0F1F419689003CB33D /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				19B06AF41F41935E003CB33D /* SimpleNetwork */,
@@ -175,6 +267,58 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		19B06B1B1F41968A003CB33D /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 19B06B1A1F41968A003CB33D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B06B1D1F41968A003CB33D /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = 19B06B1C1F41968A003CB33D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B06B1F1F41968A003CB33D /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 19B06B1E1F41968A003CB33D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B06B211F41968A003CB33D /* Alamofire macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire macOS Tests.xctest";
+			remoteRef = 19B06B201F41968A003CB33D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B06B231F41968A003CB33D /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 19B06B221F41968A003CB33D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B06B251F41968A003CB33D /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = 19B06B241F41968A003CB33D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19B06B271F41968A003CB33D /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 19B06B261F41968A003CB33D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		19B06AF31F41935E003CB33D /* Resources */ = {
@@ -198,6 +342,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B06B3D1F419817003CB33D /* SimpleNetworkManager.swift in Sources */,
+				19B06B391F4197A0003CB33D /* String+Utils.swift in Sources */,
+				19B06B341F41974D003CB33D /* Router.swift in Sources */,
+				19B06B3B1F4197D4003CB33D /* NetworkResponse.swift in Sources */,
+				19B06B3F1F419851003CB33D /* SimpleNetworkDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B06B411F41B921003CB33D /* TestRouter.swift in Sources */,
 				19B06B041F41935E003CB33D /* SimpleNetworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +474,7 @@
 		19B06B0A1F41935E003CB33D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4W7385FUX6;
@@ -336,6 +487,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.valera.SimpleNetwork;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -343,6 +495,7 @@
 		19B06B0B1F41935E003CB33D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 4W7385FUX6;
@@ -362,6 +515,7 @@
 		19B06B0D1F41935E003CB33D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4W7385FUX6;
 				INFOPLIST_FILE = SimpleNetworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +528,7 @@
 		19B06B0E1F41935E003CB33D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 4W7385FUX6;
 				INFOPLIST_FILE = SimpleNetworkTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -402,6 +557,7 @@
 				19B06B0B1F41935E003CB33D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19B06B0C1F41935E003CB33D /* Build configuration list for PBXNativeTarget "SimpleNetworkTests" */ = {
 			isa = XCConfigurationList;
@@ -410,6 +566,7 @@
 				19B06B0E1F41935E003CB33D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

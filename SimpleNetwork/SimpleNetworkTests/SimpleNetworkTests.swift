@@ -24,6 +24,20 @@ class SimpleNetworkTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+        let router = AuthRouter(call: .sendSms)
+        let s = SimpleNetworkManager()
+        
+
+    
+        
+        let expect = expectation(description: "api call")
+        s.callAPI(router: router.router) { response in
+            print("response: \(response)")
+            expect.fulfill()
+        }
+        wait(for: [expect], timeout: 30)
+
     }
     
     func testPerformanceExample() {
