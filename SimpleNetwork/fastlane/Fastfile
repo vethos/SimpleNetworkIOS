@@ -1,0 +1,13 @@
+lane :test do
+ensure_git_branch(
+    	branch: 'master'
+    )
+    git_pull
+    scan(
+    	scheme: 'SimpleNetwork',
+		clean: true,
+		open_report: false,
+		code_coverage: true,
+		slack_only_on_failure:true
+	)
+end
