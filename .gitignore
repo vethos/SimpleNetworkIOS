@@ -65,3 +65,9 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+
+
+SimpleNetwork/fastlane/report.xml
+SimpleNetwork/fastlane/Preview.html
+SimpleNetwork/fastlane/screenshots
+SimpleNetwork/fastlane/test_output
