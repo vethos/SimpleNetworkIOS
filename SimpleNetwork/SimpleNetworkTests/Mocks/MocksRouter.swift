@@ -1,15 +1,15 @@
 //
-//  TestRouter.swift
+//  MocksRouter.swift
 //  SimpleNetwork
 //
-//  Created by Ilan Ben Tal on 14/08/2017.
+//  Created by Ilan Ben Tal on 16/08/2017.
 //  Copyright © 2017 Valera Health. All rights reserved.
 //
 
 import Foundation
 @testable import SimpleNetwork
 
-class AuthRouter {
+class MocksRouter {
     
     lazy var router: Router = {
         let r = Router()
@@ -19,8 +19,7 @@ class AuthRouter {
     }()
     
     enum APICalls {
-        case sendSms
-        case upload
+        case get
     }
     
     var call: APICalls!
@@ -31,27 +30,23 @@ class AuthRouter {
     
 }
 
-extension AuthRouter: APIParams {
+extension MocksRouter: APIParams {
     
     public func url() -> String {
         switch  call! {
-        case .sendSms:
-            return "https://app-4996.on-aptible.com/api/auth/login/sms"
-        case .upload:
-            return "https://app-4996.on-aptible.com/proxy/api/Images/upload"
+        case .get:
+            return "https://http://httpbin.org/get"
         }
     }
     
     public func HTTPMethod() -> HTTPMethod {
         
-        return .post
+        return .get
     }
     
     public func parameters() -> Parameters? {
         switch  call! {
-        case .sendSms:
-            return ["phone": "+972544813444"]
-        case .upload:
+        case .get:
             return nil
         }
     }
@@ -61,11 +56,15 @@ extension AuthRouter: APIParams {
     }
 }
 
-extension AuthRouter: RouterDelegate {
+extension MocksRouter: RouterDelegate {
     
     public func addHeaders(toRequest request: inout URLRequest) {
+        let headers: [HttpHeader] = [
+            .timeZone,
+            .appVersion(version: "1.0.0"),
+            .authorization(token: "1234567890")
+        ]
         
-//        APIManager.addHeaders(toRequest: &request, withHeaders: [.timeZone, .appVersion(version: Bundle.appVersion)])
-        
+        request.add(headers: headers)
     }
 }

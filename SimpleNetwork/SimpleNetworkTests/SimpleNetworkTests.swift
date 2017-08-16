@@ -28,13 +28,27 @@ class SimpleNetworkTests: XCTestCase {
         let router = AuthRouter(call: .sendSms)
         let s = SimpleNetworkManager()
         
-
-    
-        
         let expect = expectation(description: "api call")
         s.callAPI(router: router.router) { response in
             print("response: \(response)")
             expect.fulfill()
+        }
+        wait(for: [expect], timeout: 30)
+
+    }
+    
+    func testUploadImage() {
+        
+        let router = AuthRouter(call: .upload)
+        let s = SimpleNetworkManager()
+        let expect = expectation(description: "upload image call")
+
+        s.uploadImage(data: Data(),
+                      router: router.router) { response in
+                        expect.fulfill()
+
+                        
+                        print("response: \(response)")
         }
         wait(for: [expect], timeout: 30)
 
