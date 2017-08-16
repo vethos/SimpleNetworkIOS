@@ -13,7 +13,7 @@ import Alamofire
 public protocol APIParams: class {
     
     func url() -> String
-    func HTTPMethod() -> HTTPMethods
+    func HTTPMethod() -> HTTPMethod
     func parameters() -> Parameters?
     func timeoutInterval() -> TimeInterval
     
@@ -24,10 +24,49 @@ public protocol RouterDelegate: class {
 }
 
 public enum RoutingError: Error {
-    case error
+    case missingRouter
 }
 
-public enum HTTPMethods: String {
+public enum HttpHeader {
+    
+    case authorization(token: String)
+    case appVersion(version: String)
+    case timeZone
+    case version(number: String)
+    case custom(key: String, value: String)
+    
+    var key: String {
+        switch self {
+        case .authorization:
+            return "Authorization"
+        case .appVersion:
+            return "App-Version"
+        case .timeZone:
+            return "Timezone"
+        case .version:
+            return "version"
+        case .custom(let key, _):
+            return key
+        }
+    }
+    
+    var value: String {
+        switch self {
+        case .authorization(let token):
+            return "Bearer \(token)"
+        case .appVersion(let version):
+            return version
+        case .timeZone:
+            return TimeZone.current.identifier
+        case .version(let number):
+            return number
+        case .custom(_, let value):
+            return value
+        }
+    }
+}
+
+public enum HTTPMethod: String {
     
     case get     = "GET"
     case post    = "POST"
@@ -56,7 +95,7 @@ open class Router: URLRequestConvertible {
         
         guard let apiParams = apiParams,
             let url = URL(string: apiParams.url().urlEncoded) else {
-                throw RoutingError.error
+                throw RoutingError.missingRouter
         }
         
         var request = URLRequest(url: url)

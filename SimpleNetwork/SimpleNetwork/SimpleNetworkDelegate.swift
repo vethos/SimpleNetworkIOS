@@ -8,7 +8,14 @@
 
 import Foundation
 
-protocol SimpleNetworkDelegate: class {
+
+/// Delegate for the wraper api manager
+public protocol SimpleNetworkDelegate: class {
     func callAPI(router: Router, callback: responseCallback?)
     func uploadImage(data: Data, router: Router, callback: responseCallback?)
+}
+
+/// Delegate for handling a error globaly by a api manager
+public protocol SimpleNetworkErrorDelegate: class {
+    func handle(error: ResponseError)
 }

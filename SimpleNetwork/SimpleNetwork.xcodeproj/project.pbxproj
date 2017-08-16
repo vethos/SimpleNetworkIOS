@@ -17,6 +17,9 @@
 		19B06B3D1F419817003CB33D /* SimpleNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B06B3C1F419817003CB33D /* SimpleNetworkManager.swift */; };
 		19B06B3F1F419851003CB33D /* SimpleNetworkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B06B3E1F419851003CB33D /* SimpleNetworkDelegate.swift */; };
 		19B06B411F41B921003CB33D /* TestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B06B401F41B921003CB33D /* TestRouter.swift */; };
+		19B06B431F4429DF003CB33D /* URLRequest+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B06B421F4429DF003CB33D /* URLRequest+Utils.swift */; };
+		19B06B461F442CDE003CB33D /* MocksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B06B451F442CDE003CB33D /* MocksRouter.swift */; };
+		19B06B481F442EAF003CB33D /* RouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B06B471F442EAF003CB33D /* RouterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +95,9 @@
 		19B06B3C1F419817003CB33D /* SimpleNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetworkManager.swift; sourceTree = "<group>"; };
 		19B06B3E1F419851003CB33D /* SimpleNetworkDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNetworkDelegate.swift; sourceTree = "<group>"; };
 		19B06B401F41B921003CB33D /* TestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestRouter.swift; sourceTree = "<group>"; };
+		19B06B421F4429DF003CB33D /* URLRequest+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URLRequest+Utils.swift"; sourceTree = "<group>"; };
+		19B06B451F442CDE003CB33D /* MocksRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MocksRouter.swift; sourceTree = "<group>"; };
+		19B06B471F442EAF003CB33D /* RouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,10 +145,11 @@
 				19B06AF81F41935E003CB33D /* SimpleNetwork.h */,
 				19B06AF91F41935E003CB33D /* Info.plist */,
 				19B06B331F41974D003CB33D /* Router.swift */,
-				19B06B381F4197A0003CB33D /* String+Utils.swift */,
 				19B06B3A1F4197D4003CB33D /* NetworkResponse.swift */,
 				19B06B3C1F419817003CB33D /* SimpleNetworkManager.swift */,
 				19B06B3E1F419851003CB33D /* SimpleNetworkDelegate.swift */,
+				19B06B421F4429DF003CB33D /* URLRequest+Utils.swift */,
+				19B06B381F4197A0003CB33D /* String+Utils.swift */,
 			);
 			path = SimpleNetwork;
 			sourceTree = "<group>";
@@ -150,6 +157,8 @@
 		19B06B021F41935E003CB33D /* SimpleNetworkTests */ = {
 			isa = PBXGroup;
 			children = (
+				19B06B441F442B38003CB33D /* Mocks */,
+				19B06B471F442EAF003CB33D /* RouterTests.swift */,
 				19B06B031F41935E003CB33D /* SimpleNetworkTests.swift */,
 				19B06B401F41B921003CB33D /* TestRouter.swift */,
 				19B06B051F41935E003CB33D /* Info.plist */,
@@ -169,6 +178,14 @@
 				19B06B271F41968A003CB33D /* Alamofire.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		19B06B441F442B38003CB33D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				19B06B451F442CDE003CB33D /* MocksRouter.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19B06B3D1F419817003CB33D /* SimpleNetworkManager.swift in Sources */,
+				19B06B431F4429DF003CB33D /* URLRequest+Utils.swift in Sources */,
 				19B06B391F4197A0003CB33D /* String+Utils.swift in Sources */,
 				19B06B341F41974D003CB33D /* Router.swift in Sources */,
 				19B06B3B1F4197D4003CB33D /* NetworkResponse.swift in Sources */,
@@ -354,8 +372,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B06B481F442EAF003CB33D /* RouterTests.swift in Sources */,
 				19B06B411F41B921003CB33D /* TestRouter.swift in Sources */,
 				19B06B041F41935E003CB33D /* SimpleNetworkTests.swift in Sources */,
+				19B06B461F442CDE003CB33D /* MocksRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
